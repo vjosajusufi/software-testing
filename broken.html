@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Broken Page Test</title>
+
+    <!-- Missing closing style tag error -->
+    <style>
+        body {
+            font-family: Arial
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            color: blue;
+        }
+    <!-- style tag not closed properly -->
+
+</head>
+<body>
+
+    <h1>Testing Broken HTML</h1>
+
+    <!-- Missing alt attribute (accessibility issue) -->
+    <img src="image.jpg">
+
+    <!-- Improper nesting -->
+    <p>This is a paragraph <div>inside a div (invalid)</div></p>
+
+    <!-- Missing closing tag -->
+    <ul>
+        <li>Item 1
+        <li>Item 2
+        <li>Item 3
+    </ul>
+
+    <!-- Inline JS error -->
+    <button onclick="showMessage()">Click me</button>
+
+    <p id="output"></p>
+
+    <script>
+        function showMessage() {
+            let message = "Hello World"
+
+            // Missing semicolon and wrong function name
+            document.getElementByID("output").innerHTML = message
+
+            // Undefined variable
+            console.log(result)
+
+            // Syntax error below
+            if(message == "Hello World") {
+                console.log("Correct")
+            else {
+                console.log("Wrong")
+            }
+        }
+    </script>
+
+    <!-- Duplicate ID issue -->
+    <div id="output">Duplicate ID here</div>
+
+    <!-- Invalid attribute -->
+    <input type="text" required="maybe">
+
+    <!-- Broken link -->
+    <a href="htp://invalid-url">Broken Link</a>
+
+</body>
+</html>
